@@ -1,0 +1,16 @@
+.header,
+.main,
+.footer {
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-jumbo {
+  background-color: coral;
+  border-color: coral;
+}
+
+.btn-jumbo:hover {
+  background-color: lightcoral;
+  border-color: lightcoral;
+  ;
+}
