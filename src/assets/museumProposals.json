@@ -1,0 +1,29 @@
+[
+  {
+    "type": {
+      "permanent": "Permanent exhibition"
+    },
+    "price": {
+      "basic": 20,
+      "senior": 10
+    }
+  },
+  {
+    "type": {
+      "temporary": "Temporary exhibition"
+    },
+    "price": {
+      "basic": 25,
+      "senior": 12.5
+    }
+  },
+  {
+    "type": {
+      "combi": "Combined Admission"
+    },
+    "price": {
+      "basic": 40,
+      "senior": 20
+    }
+  }
+]

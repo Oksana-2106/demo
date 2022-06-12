@@ -1,0 +1,175 @@
+.contacts-section {
+  min-height: 963px;
+}
+
+.contacts-section .underline {
+  margin-bottom: 103px;
+}
+
+.contacts-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contacts-details-txt {
+  width: 282px;
+  height: 244px;
+  margin-right: 198px;
+  font-style: normal;
+  color: #000000;
+}
+
+.contacts-name {
+  display: block;
+  height: 33px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.contacts-name.last {
+  margin: 1px auto 0;
+}
+
+.contacts-org {
+  margin-bottom: 50px;
+  height: 66px;
+}
+
+.contacts-adress {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0 0 25px;
+}
+
+.contacts-adress.last {
+  margin-bottom: 0;
+}
+
+.contacts-details-map {
+  width: 960px;
+  height: 620px;
+}
+
+@media (max-width: $desktop) {
+
+  .contacts-section {
+    min-height: 614px;
+  }
+
+  .contacts-section .underline {
+    margin-bottom: 83px;
+  }
+
+  .contacts-details-map {
+    width: 694px;
+    height: 454px;
+  }
+
+  .contacts-details-txt {
+    width: 274px;
+    height: 365px;
+    margin-right: 16px;
+  }
+
+  .contacts-org {
+    margin-bottom: 35px;
+    height: 56px;
+  }
+
+  .contacts-name {
+    height: 28px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .contacts-name.last {
+    margin: 0;
+  }
+
+  .contacts-adress {
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 0 15px;
+  }
+
+}
+
+@media (max-width: $tablet) {
+
+  .contacts-section {
+    min-height: 818px;
+  }
+
+  .contacts-section .underline {
+    margin-bottom: 63px;
+  }
+
+  .contacts-details-map {
+    width: 728px;
+    height: 476px;
+  }
+
+  .contacts-details {
+    display: block;
+  }
+
+  .contacts-details-txt {
+    width: 234px;
+    height: 179px;
+    margin: 0 0 40px;
+  }
+
+  .contacts-org {
+    margin-bottom: 40px;
+    height: 46px;
+  }
+
+  .contacts-name {
+    height: 23px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .contacts-adress {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+}
+
+@media (max-width: $mobile) {
+
+  .contacts-section {
+    min-height: 556px;
+  }
+
+  .contacts-details-map {
+    width: 380px;
+    height: 248px;
+  }
+
+  .contacts-details-txt {
+    width: 208px;
+    height: 165px;
+    margin-bottom: 40px;
+  }
+
+  .contacts-org {
+    height: 38px;
+  }
+
+  .contacts-name {
+    height: 19px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .contacts-adress {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+}

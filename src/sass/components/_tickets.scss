@@ -1,0 +1,381 @@
+.tickets-section {
+  min-height: 893px;
+}
+
+.tickets-buy {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tickets-buy-img {
+  width: 780px;
+  height: 550px;
+  padding-right: 60px;
+}
+
+.tickets-radio {
+  width: 510px;
+  height: 262px;
+  padding-right: 240px;
+}
+
+.tickets-price {
+  width: 150px;
+  height: 342px;
+}
+
+.tickets-set {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.tickets-header {
+  color: #030303;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  margin: 0 25px 50px 0;
+}
+
+.amount-header {
+  margin: 0 25px 25px 0;
+  text-align: right;
+}
+
+.tickets-lbl {
+  color: #030303;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.radio-btn-txt {
+  display: block;
+  position: relative;
+  user-select: none;
+  cursor: pointer;  
+  margin-bottom:50px;
+  padding-left: 40px;
+  width: 270px;
+  transition: font-width 1s, border-width 1s;
+}
+
+.radio-btn-txt.last {
+  margin-bottom: 0;
+}
+
+.radio-btn {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.radio-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 2px solid #030303;
+  background-color: #ffffff;
+}
+
+/* On mouse-over, add style to lable and span (or radio button) */
+.radio-btn-txt:hover,
+.radio-btn-txt:focus,
+.radio-btn-txt:active,
+.radio-btn-txt:hover .radio-mark,
+.radio-btn-txt:focus .radio-mark,
+.radio-btn-txt:active .radio-mark {
+  font-weight: 400;
+  border-width: 3px;
+}
+
+/* When the radio-button is checked, add another background */
+.radio-btn:checked ~ .radio-mark  {
+  background-color: #ffffff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-btn:checked ~ .radio-mark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-btn-txt .radio-mark:after {
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #030303;
+}
+
+.amount-lbl {
+  display: block;
+}
+
+.amount-wrapper {
+  width: 150px;
+  height: 50px;
+  margin: 15px 0 10px;
+  padding: 6px 14px;
+  border: 3px solid #030303;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount-senior {
+  margin-bottom: 50px;
+}
+
+.amount-count {
+  padding: 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+  background-color: #ffffff;
+  border-style: none;
+}
+
+.amount-input {
+  width: 60px; /* 116px-19px*2 (buttons) - 12px (number) */
+}
+
+.amount-btn {
+  width: 19px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  cursor: pointer;
+  transition: font-weight 1s;
+}
+
+.amount-btn:hover,
+.amount-btn:focus {
+  font-weight: bold;
+}
+
+.amount-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 175px;
+}
+
+.amount-total-lbl {
+  color: #030303;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 1.65px;
+}
+
+.amount-total {
+  position: absolute;
+  right: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border-style: none;
+  width: 53px;
+}
+
+.amount-total::-webkit-inner-spin-button,
+.amount-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.tickets-submit {
+  position: absolute;
+  top: 392px;
+  left: 1265px;
+  padding: 0;
+  width: 175px;
+  height: 50px;
+  background-color: #000000;
+  border-radius: 2px;
+  border-style: none;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.tickets-submit:hover,
+.tickets-submit:focus,
+.tickets-submit:active {
+  background-color: #9d8665;
+}
+
+/* ====== Adaptive ====== */ 
+
+@media (max-width: $desktop) {
+
+  .tickets-section {
+    min-height: 718px;
+  }
+
+  .tickets-buy-img {
+    width: 700px;
+    height: 440px;
+    padding-right: 80px;
+  }
+
+  .tickets-buy-img-picrure {
+    width: 700px;
+    height: 440px;
+  }
+
+  .tickets-radio {
+    display: none;
+  }
+
+  .tickets-price {
+    width: 175px;
+    height: 321px;
+  }
+
+  .amount-wrapper {
+    width: 175px;
+    height: 50px;
+    margin: 10px 0 25px;
+    padding: 6px 15px;
+  }
+  
+  .amount-senior {
+    margin-bottom: 25px;
+  }
+
+  .tickets-submit {
+    top: 390px;
+    left: 809px;
+    padding: 0;
+  }
+
+}
+
+@media (max-width: $tablet) {
+
+  .tickets-section {
+    min-height: 633px;
+  }
+
+  .tickets-buy-img {
+    width: 444px;
+    height: 340px;
+    padding-right: 60px;
+  }
+
+  .tickets-buy-img-picrure {
+    width: 444px;
+    height: 340px;
+  }
+
+  .tickets-price {
+    height: 340px;
+  }
+  
+  .amount-header {
+    padding-bottom: 39px;
+  }
+
+  .amount-senior {
+    margin-bottom: 39px;
+  }
+
+  .tickets-submit {
+    top: 380px;
+    left: 329px;
+    padding: 0; 
+  }
+
+}
+
+@media (max-width: $mobile) {
+
+  .tickets-section {
+    min-height: 759px;
+  }
+
+  .tickets-buy {
+    position: static;
+    display: block;
+    text-align: center;
+  }
+
+  .tickets-buy-img {
+    width: 380px;
+    height: 160px;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .tickets-buy-img-picrure {
+    width: 380px;
+    height: 160px;
+  }
+
+  .tickets-price {
+    height: 286px;
+    margin: 0 auto;
+  }
+
+  .tickets-header {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .amount-header {
+    padding-bottom: 20px;
+  }
+
+  .amount-wrapper {
+    margin: 15px 0 20px;
+  }
+  
+  .amount-senior {
+    margin-bottom: 40px;
+  }
+
+  .amount-layout {
+    justify-content: center;
+  }
+
+  .amount-total {
+    position: static;
+    width: fit-content;
+  }
+   
+  .amount-total-lbl {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .tickets-submit {
+    position: static;
+    margin-top: 40px;
+    padding: 0;
+    font-size: 16px;
+  }
+
+}

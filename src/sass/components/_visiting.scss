@@ -1,0 +1,169 @@
+.visiting-section {
+  min-height: 1266px;
+}
+
+.visiting-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 75px 60px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  height: 422px;
+  text-decoration: none;
+}
+
+.card-pic {
+  width: 440px;
+  height: 285px;
+}
+
+.card-title {
+  margin: 25px 0 22px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 3px;
+  display: block;
+}
+
+.underline.card-title::after {
+  bottom: -10px;
+  right: 140px;
+  height: 2px;
+  transition-timing-function: ease-in;
+  transition-duration: 1250ms;
+}
+
+.card:hover .underline.card-title::after,
+.card:focus .underline.card-title::after,
+.card:active .underline.card-title::after {
+  right: 0px;
+  transition-timing-function: ease-in;
+  transition-duration: 1250ms;
+}
+
+.card-txt1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.card-txt2 {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0;
+}
+
+@media (max-width: $desktop) {
+
+  .visiting-section {
+    min-height: 1433px;
+  }
+
+  .visiting-wrapper {
+    justify-content: center;
+    gap: 60px 108px;
+  }
+
+  .card {
+    width: 330px;
+    height: 345px;
+  }
+  
+  .card-pic {
+    width: 330px;
+    height: 215px;
+  }
+
+  .card-title {
+    font-size: 28px;
+    line-height: 31px;
+  }
+  
+  .underline.card-title::after {
+    right: 180px;    
+  }
+
+  .card-txt1 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  
+  .card-txt2 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+}
+
+@media (max-width: $tablet) {
+
+  .visiting-section {
+    min-height: 1226px;
+  }
+
+  .visiting-wrapper {
+    gap: 40px 56px;
+  }
+
+  .card {
+    width: 280px;
+    height: 301px;
+  }
+  
+  .card-pic {
+    width: 280px;
+    height: 180px;
+  }
+
+  .card-title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+  
+  .underline.card-title::after {
+    right: 130px;    
+  }
+
+  .card-txt1 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+}
+
+@media (max-width: $mobile) {
+
+  .visiting-section {
+    min-height: 2153px;
+  }
+  
+  .visiting-wrapper {
+    direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .card {
+    height: 295px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .card-txt1 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+}

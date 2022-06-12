@@ -1,0 +1,280 @@
+.header {
+  height: 150px;
+  padding: 59px 0 58px;
+  background-color: $darkbg;
+}
+
+.header__wrapper { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 195px;
+  background-image: url(../assets/svg/logo-ico.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 49px 26px;
+  transition: background-image 1s;
+}
+
+.header__logo:hover,
+.header__logo:focus,
+.header__logo:active {
+  background-image: url(../assets/svg/logo-ico_hover.svg);
+}
+
+.header__logo-link {
+  text-decoration: none;
+}
+
+.header__logo-txt {
+  width: 125px;
+  margin: 0 0 0 auto;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ffffff;
+  font-family: 'Forum';
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 31px;
+  transition: color 1s;
+}
+
+.header__logo-txt:hover,
+.header__logo-txt:focus,
+.header__logo-txt:active {
+  color: $linkhover;
+}
+
+.header__nav {
+  width: 775px;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header__item {
+  list-style: none;
+  margin-right: 51px;
+  font-weight: 200;
+}
+
+.header__item:last-child {
+  margin-right: 0;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #ffffff;  
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  transition: color 1s;
+  border: -1px solid rgba(0, 0, 0, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  color: $linkhover;
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: 32px;
+  height: 18px;
+  background-image: url(../assets/svg/burger.svg);
+  background-size: 32px 18px;
+  background-repeat: no-repeat;
+}
+
+.burger:hover {
+  background-image: url(../assets/svg/burger_hover.svg);
+}
+
+@media (max-width: $desktop) {
+
+  .header {
+    height: 130px;
+    padding: 49px 0 48px;
+  }
+
+  .header__wrapper { 
+    overflow-x: hidden;
+  }
+
+  .header__logo {
+    width: 199px;
+    height: 41px;
+    top: 8px;
+  }
+
+  .header__logo-txt {
+    width: 120px;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 130px;
+    left: -297px;
+    width: 297px;
+    height: 585px;
+    padding: 35px 120px 0 55px;
+    background-color: $darkbg;
+    transition: 0.5s;
+  }
+
+  .header__list {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: flex-start;
+    row-gap: 25px;
+  }
+
+  .header__item {
+    width: 122px;
+    margin-right: 0;
+  }
+
+  .header__item:last-child {
+    margin-right: 25px;
+  }
+
+  .header__link {
+    display: block;
+    width: 122px;
+    font-size: 20px;
+    line-height: 23px;
+    background-image: url(../assets/svg/arrow.svg);
+    background-position: right center;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+  }
+
+  .header__link:hover {
+    background-image: url(../assets/svg/arrow_hover.svg);
+  }
+
+  .burger {
+    display: block;
+    top: 56px;
+    right: 20px;
+  }
+
+  .burger.close {
+    background-image: url(../assets/svg/close-burger.svg);
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+    top: 53px;
+  }
+
+  .burger.close:hover {
+      background-image: url(../assets/svg/close-burger_hover.svg);
+  }
+
+  .open {
+    left: 0px; 
+    transition: 0.5s;
+  }
+  
+}
+
+@media (max-width: $tablet) {
+
+  .burger {
+    top: 46px;
+  }
+
+  .header {
+    height: 110px;
+    padding: 35px 0 34px;
+  }
+
+  .header__logo {
+    width: 199px;
+    height: 41px;
+    background-position: top 8px left;
+  }
+
+  .header__logo-txt {
+    width: 125px;
+    line-height: 41px;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 110px;
+    left: -177px;
+    width: 177px;
+    height: 333px;
+    padding: 35px 0 35px 55px;
+    background-color: $darkbg;
+    transition: 0.5s;
+  }
+
+  .header__link {
+    display: block;
+    width: 122px;
+  }
+
+  .burger.close {
+    top: 43px;
+  }
+
+  .open {
+    left: 0px; 
+    transition: 0.5s;
+  }
+
+}
+
+@media (max-width: $mobile) {
+
+  .burger {
+    top: 36px;
+  }
+
+  .header {
+    height: 90px;
+    padding: 35px 0;
+  }
+
+  .header__logo {
+    width: 131px;
+    height: 20px;
+    background-size: 29px 16px;
+    background-position: top left;
+  }
+
+  .header__logo-txt {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .header__nav {
+    top: 90px;
+  }
+
+  .burger.close {
+    top: 32px;
+  }
+
+}
