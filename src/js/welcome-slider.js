@@ -1,86 +1,95 @@
-const rightArrow = document.querySelector('.main-slider__control.right')
-const leftArrow = document.querySelector('.main-slider__control.left')
-const slideNumber = document.querySelector('.left-slide')
-const thumbItem = document.querySelectorAll('.main-slider__thumb-item')
-const mainSliderThumb = document.querySelector('.main-slider__thumb')
-const content = document.querySelectorAll('.section__img')
-let indexOfSlide = 0
-let currentItem = 0
+const rightArrow = document.querySelector('.main-slider__control.right');
+const leftArrow = document.querySelector('.main-slider__control.left');
 
-const direction = ['to-left', 'to-right', 'from-left', 'from-right']
+const slideNumber = document.querySelector('.left-slide');
 
-let isUnabled = true
+const mainSliderThumb = document.querySelector('.main-slider__thumb');
+const thumbItem = document.querySelectorAll('.main-slider__thumb-item');
+
+const content = document.querySelectorAll('.section__img');
+
+const direction = ['to-left', 'to-right', 'from-left', 'from-right'];
+
+let indexOfSlide = 0;
+let currentItem = 0;
+
+let isUnabled = true;
 
 function changeCurrentItem(n) {
-  currentItem = (n + content.length) % content.length
+  currentItem = (n + content.length) % content.length;
 }
 
 function hideItemContent(direction) {
-  isUnabled = false
-  content[currentItem].classList.add(direction)
+  isUnabled = false;
+  content[currentItem].classList.remove('active');
+  content[currentItem].classList.add('next', direction);
   content[currentItem].addEventListener('animationend', function() {
-    this.classList.remove('active', direction)
-  })
+    this.classList.remove('next', direction);
+  });
 }
 
 function removeHighlightThumb() {
-  thumbItem[currentItem].classList.remove('active-thumb')
+  thumbItem[currentItem].classList.remove('active-thumb');
 }
 
 function highlightThumb() {
-  thumbItem[currentItem].classList.add('active-thumb')
+  thumbItem[currentItem].classList.add('active-thumb');
 }
 
 function showItemContent(direction) {
-  content[currentItem].classList.add('next', direction)
+  content[currentItem].classList.add('next', direction);
   content[currentItem].addEventListener('animationend', function() {
-    this.classList.remove('next', direction)
-    this.classList.add('active')
-    isUnabled = true
-  })
+    this.classList.remove('next', direction);
+    isUnabled = true;
+  });
+  
+  content[currentItem].classList.add('active');
 }
 
 function previousItem(n) {
-  hideItemContent(direction[1])
-  removeHighlightThumb()
-  changeCurrentItem(currentItem - 1)
-  showItemContent(direction[2])
-  highlightThumb()
-  slideNumber.innerText = `0${currentItem + 1}`
+  hideItemContent(direction[1]);
+  
+  removeHighlightThumb();
+
+  changeCurrentItem(currentItem - 1);
+
+  showItemContent(direction[2]);
+  highlightThumb();
+  slideNumber.innerText = `0${currentItem + 1}`;
 }
 
 function nextItem(n) {
-  hideItemContent(direction[0])
-  removeHighlightThumb()
-  changeCurrentItem(currentItem + 1)
-  showItemContent(direction[3])
-  highlightThumb()
-  slideNumber.innerText = `0${currentItem + 1}`
+  hideItemContent(direction[0]);
+  removeHighlightThumb();
+  changeCurrentItem(currentItem + 1);
+  showItemContent(direction[3]);
+  highlightThumb();
+  slideNumber.innerText = `0${currentItem + 1}`;
 }
 
 function previousThumbItem(n) {
-  hideItemContent(direction[1])
-  currentItem = indexOfSlide
-  showItemContent(direction[2])
+  hideItemContent(direction[1]);
+  currentItem = indexOfSlide;
+  showItemContent(direction[2]);
 }
 
 function nextThumbItem(n) {
-  hideItemContent(direction[0])
-  currentItem = indexOfSlide
-  showItemContent(direction[3])
+  hideItemContent(direction[0]);
+  currentItem = indexOfSlide;
+  showItemContent(direction[3]);
 }
 
 leftArrow.addEventListener('click', function() {
   if (isUnabled) {
-    previousItem(currentItem)
+    previousItem(currentItem);
   }
-})
+});
 
 rightArrow.addEventListener('click', function() {
   if (isUnabled) {
-     nextItem(currentItem)
+     nextItem(currentItem);
     }
-})
+});
 
 thumbItem.forEach(element => element.addEventListener('click', (e) => {
   if (isUnabled) {

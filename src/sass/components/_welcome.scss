@@ -29,11 +29,12 @@
 .section__img {
   display: none;
   position: absolute;
+  width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
-  animation: 0.5s ease-in-out;
+  animation: .5s ease-in-out;
 }
 
 .img-01 {
@@ -64,7 +65,7 @@
   
 .next {
   position: absolute;
-  left: 0;
+  left: 100%;
   height: 100%;
 }
 
@@ -221,19 +222,19 @@
 }
 
 @keyframes right {
-  from {
+  0% {
     left: 0;
   }
-  to {
+  100% {
     left: 100%;
   }
 }
 
 @keyframes left {
-  from {
+  0% {
     left: 0;
   }
-  to {
+  100% {
     left: -100%;
   }
 }

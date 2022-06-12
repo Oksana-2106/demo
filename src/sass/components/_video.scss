@@ -263,20 +263,20 @@
 // ! SLIDER
 
 
-.active-video,
-.next {
-  position: relative;
-  display: block;
-  width: 452px;
-  height: 254px;
-}
+// .active-video,
+// .next {
+//   position: relative;
+//   display: block;
+//   width: 452px;
+//   height: 254px;
+// }
 
   
-.next {
-  position: absolute;
-  left: 0;
-  // height: 100%;
-}
+// .next {
+//   position: absolute;
+//   left: 0;
+//   height: 100%;
+// }
 
 .to-left {  
   animation-name: left;
@@ -296,23 +296,23 @@
   animation-direction: reverse;
 }
 
-@keyframes right {
-  from {
-    left: 0;
-  }
-  to {
-    left: 492px;
-  }
-}
+// @keyframes right {
+//   from {
+//     left: 0;
+//   }
+//   to {
+//     left: 492px;
+//   }
+// }
 
-@keyframes left {
-  from {
-    left: 0;
-  }
-  to {
-    left: -492px;
-  }
-}
+// @keyframes left {
+//   from {
+//     left: 0;
+//   }
+//   to {
+//     left: -492px;
+//   }
+// }
 
 @media (max-width: $desktop) {
 
